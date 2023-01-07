@@ -2,7 +2,7 @@ import openai
 import subprocess
 import time
 
-openai.api_key = "ta clé api"
+openai.api_key = "clé api"
 
 model_engine = "text-davinci-003"
 
@@ -48,25 +48,25 @@ while True:
         # Si la question commence par "script" ou "code", vérifier le langage de programmation
         if "python" in question.lower():
             extension = "py"
-            with open("/home/matheo/Pro/Py/script.py", "a") as f:
+            with open("\Bureau\Pro\Py\script.py", "a") as f:
                 f.write(answer.strip())
         elif "javascript" in question.lower():
             extension = "js"
-            with open("/home/matheo/Pro/JS/script.js", "a") as f:
+            with open("\Bureau\Pro\JS\script.js", "a") as f:
                 f.write(answer.strip())
         elif "html" in question.lower():
             extension = "html"
-            with open("/home/matheo/Pro/HTML/index.html", "a") as f:
+            with open("\Bureau\Pro\HTML\index.html", "a") as f:
                 f.write(answer.strip())
         elif "css" in question.lower():
             extension = "css"
-            with open("/home/matheo/Pro/C/style.css", "a") as f:
+            with open("Bureau\Pro\CSS\style.css", "a") as f:
                 f.write(answer.strip())
         elif "java" in question.lower():
             extension = "java"
         elif "c++" in question.lower():
             extension = "cpp"
-            with open("~/home/matheo/Pro/CPP/main.cpp", "a") as f:
+            with open("\Bureau\Pro\CPP\main.cpp", "a") as f:
                 f.write(answer.strip())
         elif "c#" in question.lower():
             extension = "cs"
@@ -82,7 +82,7 @@ while True:
             extension = "go"
         elif "c" in question.lower():
             extension = "c"
-            with open("/home/matheo/Pro/C/main.c", "a") as f:
+            with open("\Bureau\Pro\C\main.c", "a") as f:
                 f.write(answer.strip())
         else:
             extension = "txt"
@@ -91,7 +91,7 @@ while True:
 
         # Si c'est un script C, ouvrir le fichier dans CLion
         if extension == "c":
-            subprocess.Popen(["clion", "/home/matheo/Pro/C/main.c"])
+            subprocess.Popen(["clion", "\Bureau\Pro\C\main.c"])
 
         # si c'est un script C++, ouvrir le fichier dans CLion
         elif extension == "cpp":
@@ -118,3 +118,9 @@ while True:
         with open("conversation.txt", "a") as f:
             f.write(f"Vous: {question}\n")
             f.write(f"Assistant: {answer}\n")
+
+
+
+
+
+
